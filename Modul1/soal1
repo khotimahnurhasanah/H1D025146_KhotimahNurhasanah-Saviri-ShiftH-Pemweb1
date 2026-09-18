@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biodata Diri</title>
+    </head>
+
+    <body>
+        <h2>BIODATA DIRI:</h2>
+
+        <img src="H1D025146.jpg" alt="Foto Saya" width="300">
+
+        <p>Nama: Khotimah Nurhasanah Saviri</p>
+
+        <p>NIM: H1D025146</p>
+
+        <p>Kota: Tangerang</p>
+    </body>
+</html>
