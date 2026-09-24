@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tugas Form</title>
+    <title>Form Pendaftaran</title>
 </head>
 <body>
 
     <form>
 
-        Input 1:
-        <input type="text" value="cuna" readonly>
+        Input 1 (Nilai Tetap):
+        <input type="text" value="Test" readonly>
         <br><br>
 
-        Input 2:
+        Input 2 (Maks. 5 Karakter):
         <input type="text" maxlength="5">
         <br><br>
 
-        Input 3:
+        Input 3 (Tidak Dapat Diklik):
         <input type="text" disabled>
         <br><br>
 
-        Input 4:
+        Input 4 (Wajib Diisi):
         <input type="text" required>
         <br><br>
 
-        Input 5:
-        <input type="text" pattern="H1D025146" maxlength="9"
-               title="Masukkan NIM H1D025146">
+        NIM (9 Karakter, huruf/angka):
+        <input type="text"
+               pattern="[A-Z0-9]{9}"
+               maxlength="9"
+               title="NIM harus 9 karakter, huruf kapital dan angka">
         <br><br>
 
         <input type="submit" value="Submit">
