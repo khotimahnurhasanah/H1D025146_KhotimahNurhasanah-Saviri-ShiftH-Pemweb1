@@ -1,80 +1,99 @@
 body {
-    background: blue;
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #eee7f7;
 }
 
-h2 {
-    font-family: "Comic Sans MS";
-    background-color: red;
+.container {
+    width: 700px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+
+    border: 3px solid #8e6bbf;
+}
+
+h1 {
+    margin: 0;
+    padding: 15px;
     text-align: center;
+    color: white;
+    background-color: #8e6bbf;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
 }
 
 table {
-    background: grey;
-    margin: 0 auto;
-    padding: 5px;
-    width: 68%;
+    width: 100%;
+    padding: 15px;
+    background-color: #f8f4fc;
 
-    /* Border form */
-    border: 3px solid black;
+    /* salah satu border-style dari Percobaan 1 */
+    border: 3px solid #8e6bbf;
 }
 
-.kolom1 {
+td {
+    padding: 10px;
+}
+
+td:first-child {
+    width: 150px;
     font-weight: bold;
-    width: 15%;
+    color: #604080;
 }
 
-.kolom2 {
-    width: 2%;
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+
+    border: 1px solid #b9a3d0;
 }
 
-.kolom3 {
-    width: 83%;
+textarea {
+    resize: none;
 }
 
-#txtNama, #txtKota {
-    width: 186px;
+.button {
+    text-align: center;
+    padding-top: 20px;
 }
-
-#txtTgl, #txtBulan {
-    width: 54px;
-}
-
-#txtTahun {
-    width: 87px;
-}
-
-#txtAlamat {
-    width: 346px;
-    height: 42px;
-}
-
-
-/* STYLE TOMBOL */
 
 #btnKirim {
-    background-color: green;
+    padding: 10px 25px;
+    background-color: #8e6bbf;
     color: white;
-    border: 2px solid darkgreen;
-    padding: 8px 20px;
-    margin-right: 10px;
+    border: 2px solid #6f4d9b;
     cursor: pointer;
 }
 
 #btnKirim:hover {
-    background-color: lightgreen;
-    color: black;
+    background-color: #6f4d9b;
 }
 
-
 #btnCancel {
-    background-color: red;
+    padding: 10px 25px;
+    background-color: #e58b9b;
     color: white;
-    border: 2px solid darkred;
-    padding: 8px 20px;
+    border: 2px solid #c9687d;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 #btnCancel:hover {
-    background-color: pink;
-    color: black;
+    background-color: #c9687d;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    margin-top: 20px;
 }
