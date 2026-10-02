@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Penilaian</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .container {
+            width: 420px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #hasil {
+            margin-top: 25px;
+            padding: 15px;
+            text-align: center;
+            background-color: #f1f8ff;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Aplikasi Penilaian</h1>
+
+        <p>Masukkan nilai antara 0 sampai 100</p>
+
+        <label for="nilai">Nilai:</label>
+        <input type="number" id="nilai" min="0" max="100">
+
+        <button onclick="hitungNilai()">Cek Nilai</button>
+
+        <div id="hasil">
+            Hasil akan ditampilkan di sini.
+        </div>
+
+    </div>
+
+    <script>
+        function hitungNilai() {
+
+            let nilai = Number(document.getElementById("nilai").value);
+            let grade;
+
+            if (nilai === "" || isNaN(nilai)) {
+                document.getElementById("hasil").innerHTML =
+                    "Silakan masukkan nilai terlebih dahulu.";
+                return;
+            }
+
+            if (nilai < 0 || nilai > 100) {
+                document.getElementById("hasil").innerHTML =
+                    "Nilai harus berada antara 0 sampai 100.";
+                return;
+            }
+
+            if (nilai >= 0 && nilai <= 20) {
+                grade = "E";
+            } 
+            else if (nilai >= 21 && nilai <= 40) {
+                grade = "D";
+            } 
+            else if (nilai >= 41 && nilai <= 60) {
+                grade = "C";
+            } 
+            else if (nilai >= 61 && nilai <= 80) {
+                grade = "B";
+            } 
+            else if (nilai >= 81 && nilai <= 100) {
+                grade = "A";
+            }
+
+            document.getElementById("hasil").innerHTML =
+                "Nilai: <strong>" + nilai + "</strong><br>" +
+                "Grade: <strong>" + grade + "</strong>";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 4 - Mouse Event</title>
+
+    <style>
+        .kotak {
+            width: 250px;
+            height: 120px;
+            background-color: lightblue;
+            border: 2px solid navy;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Percobaan 4</h1>
+    <h2>Mouse Event</h2>
+
+    <div 
+        class="kotak"
+        onmouseover="mouseMasuk()"
+        onmouseout="mouseKeluar()">
+        Arahkan Mouse ke Sini
+    </div>
+
+    <p id="pesan">Belum ada aktivitas mouse.</p>
+
+    <script>
+        function mouseMasuk() {
+            document.getElementById("pesan").innerHTML =
+                "Mouse berada di dalam kotak.";
+
+            document.querySelector(".kotak").style.backgroundColor =
+                "lightgreen";
+        }
+
+        function mouseKeluar() {
+            document.getElementById("pesan").innerHTML =
+                "Mouse keluar dari kotak.";
+
+            document.querySelector(".kotak").style.backgroundColor =
+                "lightblue";
+        }
+    </script>
+
+</body>
+</html>

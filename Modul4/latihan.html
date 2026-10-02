@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan JavaScript - Validasi Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Form Pendaftaran</h1>
+
+        <form onsubmit="return validasiForm()">
+
+            <label>Nama:</label>
+            <input type="text" id="nama">
+
+            <label>NIM:</label>
+            <input type="text" id="nim">
+
+            <label>Email:</label>
+            <input type="text" id="email">
+
+            <label>Alamat:</label>
+            <input type="text" id="alamat">
+
+            <button type="submit">Kirim</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        function validasiForm() {
+
+            let nama = document.getElementById("nama").value.trim();
+            let nim = document.getElementById("nim").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let alamat = document.getElementById("alamat").value.trim();
+
+            // Mengecek field kosong
+            if (
+                nama == "" ||
+                nim == "" ||
+                email == "" ||
+                alamat == ""
+            ) {
+                alert("Semua field harus diisi!");
+                return false;
+            }
+
+            // Mengecek nama hanya boleh huruf dan spasi
+            let polaNama = /^[A-Za-z\s]+$/;
+
+            if (!polaNama.test(nama)) {
+                alert("Nama tidak boleh mengandung angka atau simbol!");
+                return false;
+            }
+
+            alert("Data berhasil dikirim!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 6 - Character Counter</title>
+
+    <style>
+        textarea {
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+        }
+
+        #counter {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Percobaan 6</h1>
+    <h2>Character Counter</h2>
+
+    <textarea
+        id="teks"
+        maxlength="100"
+        onkeyup="hitungKarakter()"
+        placeholder="Ketik sesuatu di sini..."></textarea>
+
+    <p id="counter">Jumlah karakter: 0 / 100</p>
+
+    <script>
+        function hitungKarakter() {
+            let teks = document.getElementById("teks").value;
+            let jumlah = teks.length;
+
+            document.getElementById("counter").innerHTML =
+                "Jumlah karakter: " + jumlah + " / 100";
+        }
+    </script>
+
+</body>
+</html>
